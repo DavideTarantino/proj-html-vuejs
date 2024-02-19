@@ -92,13 +92,9 @@
                         border-radius: 3px;
                         display: none;
                     }
-    
+                    
                     .active{
                         display: block;
-                    }
-    
-                    .non-active{
-                        display: none;
                     }
                 }
     
