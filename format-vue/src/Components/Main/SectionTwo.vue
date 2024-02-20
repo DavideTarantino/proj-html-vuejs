@@ -52,7 +52,7 @@
     section{
         @include page-layout;
         display: flex;
-        gap: 37%;
+        gap: 35%;
         position: relative;
         height: 100vh;    
 
@@ -61,8 +61,13 @@
             top: -70px;
 
             img{
-                width: 350px;
+                width: 420px;
                 image-rendering: crisp-edges;
+                border-radius: 0 0 60px 0;
+            }
+
+            img:hover{
+                width: 430px;
             }
 
             #didascalia-figure{
