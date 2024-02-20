@@ -3,13 +3,15 @@
     import SectionOne from './Components/Main/SectionOne.vue'
     import SectionTwo from './Components/Main/SectionTwo.vue'
     import SectionThree from './Components/Main/SectionThree.vue'
+    import SectionFour from './Components/Main/SectionFour.vue'
 
     export default {
         components:{
             SearchBar,
             SectionOne,
             SectionTwo,
-            SectionThree
+            SectionThree,
+            SectionFour
         },
         data(){
             return{}
@@ -25,6 +27,7 @@
         <SectionOne/>
         <SectionTwo/>
         <SectionThree/>
+        <SectionFour/>
     </main>
 </template>
 

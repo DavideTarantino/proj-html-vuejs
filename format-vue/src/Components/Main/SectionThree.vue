@@ -155,6 +155,7 @@
             display: flex;
             gap: 5%;
             margin-top: 25px;
+            margin-bottom: 150px;
             position: relative;
 
             div{
