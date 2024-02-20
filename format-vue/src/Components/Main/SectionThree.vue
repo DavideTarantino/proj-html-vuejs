@@ -2,14 +2,32 @@
     export default {
         name: 'SectionThree',
         data(){
-            return{}
+            return{
+                videos: [
+                    {
+                        imgUrl: '../../../public/Imgaes/video2-2x.jpg',
+                        title: 'Tighs & glute workout',
+                        description: 'Increase your mobility'
+                    },
+                    {
+                        imgUrl: '../../../public/Imgaes/video7-2x.jpg',
+                        title: 'Lift, firm & perk up',
+                        description: 'Fell young again'
+                    },
+                    {
+                        imgUrl: '../../../public/Imgaes/video9-2x.jpg',
+                        title: 'Slim & trim your waist',
+                        description: 'Shed those extra pounds'
+                    },
+                ]
+            }
         }
     }
 </script>
 
 <template>
 <main>
-    <section>
+    <section id="sezione-video-grande">
         <div id="miniatura-video">
             <img src="../../../public/Imgaes/service15-2x.jpg" alt="">
             <a href="#"><i class="fa-solid fa-play"></i></a>
@@ -21,14 +39,29 @@
             <button id="button-1"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i> Visit my YouTube channel</button>
         </div>
     </section>
+    <section id="sezione-consigliati">
+        <div id="head">
+            <h1>Featured playlists</h1>
+            <a href="#">View all videos  ></a>
+        </div>
+        <div id="body">
+            <div v-for="(element, index) in videos" :key="index">
+                <img :src="element.imgUrl" alt="">
+                <h3>{{ element.title }}</h3>
+                <p>{{ element.description }}</p>
+                <a href="#"><i class="fa-solid fa-play"></i></a>
+            </div>
+        </div>
+    </section>
 </main>
 </template>
 
 <style lang="scss" scoped>
 @use '../../Styles/partials/mixins' as*;
 
-    section{
+    #sezione-video-grande{
         position: relative;
+        height: 820px;
 
         #miniatura-video{
             position: absolute;
@@ -90,6 +123,56 @@
             border: none;
             background-color: red;
             cursor: pointer;
+            }
+        }
+    }
+
+    #sezione-consigliati{
+        @include page-layout;
+
+        img{
+            width: 400px;
+            border-radius: 5px 5px 60px 5px;
+            margin-bottom: 25px;
+        }
+
+        #head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+
+            a:hover{
+                color: blue;
+            }
+        }
+
+        #body{
+            display: flex;
+            gap: 5%;
+            margin-top: 25px;
+            position: relative;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p{
+                    color: blue;
+                }
+
+                a{
+                    position: absolute;
+                    top: 100px;
+                    background-color: white;
+                    padding: 1%;
+                    border-radius: 50px;
+                }
             }
         }
     }
