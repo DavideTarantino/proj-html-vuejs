@@ -75,7 +75,8 @@
             }
 
             img:hover{
-                width: 430px;
+                    transform: scale(1.04);
+                    transition: transform .35s;
             }
 
             #didascalia-figure{
