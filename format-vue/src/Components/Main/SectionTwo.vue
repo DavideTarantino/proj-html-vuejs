@@ -27,7 +27,7 @@
 
 <template>
     <main>
-        <section>
+        <section id="sezione-card">
             <div v-for="(element, index) in cards" :key="index">
                 <figure>
                     <img :src="element.imgUrl" alt="">
@@ -38,6 +38,14 @@
                 </figure>
             </div>    
         </section>
+        <section id="sezione-scritta">
+            <h1>“How you respond to the challenge in the second half will determine what you become after the game, whether you are a winner or a loser.”</h1>
+            <div>
+                <img src="../../../public/Imgaes/avatar-1-2x.jpg" alt="">
+                <h3>Brad Johnson</h3>
+                <h4>Las Vegas</h4>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -47,14 +55,14 @@
     main{
         background: rgb(131,58,180);
         background: linear-gradient(117deg, rgba(11,21,209,1) 0%, rgba(88,11,117,1) 30%, rgba(185,4,44,1) 98%);
+        height: 100vh; 
     }
 
-    section{
+    #sezione-card{
         @include page-layout;
         display: flex;
         gap: 35%;
-        position: relative;
-        height: 100vh;    
+        position: relative;    
 
         figure{
             position: absolute;
@@ -87,5 +95,38 @@
             }
         }
 
+        
+    }
+    #sezione-scritta{
+        @include page-layout;
+        h1{
+            color: white;
+            font-size: 40px;
+            padding-top: 500px;
+            width: 75%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        div{
+            img{
+                width: 55px;
+                border-radius: 100px;
+            }
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+            gap: 15px;
+
+            h3{
+                color: white;
+            }
+
+            h4{
+                color: gray;
+            }
+        }
     }
 </style>

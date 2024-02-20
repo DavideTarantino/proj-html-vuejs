@@ -2,12 +2,14 @@
     import SearchBar from './Components/Header/SearchBar.vue'
     import SectionOne from './Components/Main/SectionOne.vue'
     import SectionTwo from './Components/Main/SectionTwo.vue'
+    import SectionThree from './Components/Main/SectionThree.vue'
 
     export default {
         components:{
             SearchBar,
             SectionOne,
-            SectionTwo
+            SectionTwo,
+            SectionThree
         },
         data(){
             return{}
@@ -22,6 +24,7 @@
     <main>
         <SectionOne/>
         <SectionTwo/>
+        <SectionThree/>
     </main>
 </template>
 
