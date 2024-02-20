@@ -1,11 +1,13 @@
 <script>
     import SearchBar from './Components/Header/SearchBar.vue'
     import SectionOne from './Components/Main/SectionOne.vue'
+    import SectionTwo from './Components/Main/SectionTwo.vue'
 
     export default {
         components:{
             SearchBar,
-            SectionOne
+            SectionOne,
+            SectionTwo
         },
         data(){
             return{}
@@ -19,6 +21,7 @@
     </header>
     <main>
         <SectionOne/>
+        <SectionTwo/>
     </main>
 </template>
 

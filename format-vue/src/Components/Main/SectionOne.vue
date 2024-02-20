@@ -2,7 +2,8 @@
     export default {
         name: 'SectionOne',
         data(){
-            return{currentImage: 0,
+            return{
+            currentImage: 0,
             autoScroll: null,
             slides: [
                     {
@@ -38,35 +39,34 @@
 
 <template>
     <main>
-        <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+        <section>
+            <div class="container">
+                <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
-                    <img :src="slides[currentImage].image" alt="Spiderman" />
-                    <div class="text"> 
-                        <h2>{{ slides[currentImage].redTitle }}</h2>  
-                        <h1>{{ slides[currentImage].title }}</h1>
-                        <p>
-                            {{ slides[currentImage].text }}
-                        </p>
-                        <div id="button-container">
-                            <button id="button-1"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i> Visit my YouTube channel</button>
-                            <button id="button-2">Buy Avada today <i class="fa-solid fa-arrow-right-long"></i></button>
+                    <div class="item">
+                        <img :src="slides[currentImage].image" alt="Spiderman" />
+                        <div class="text"> 
+                            <h2>{{ slides[currentImage].redTitle }}</h2>  
+                            <h1>{{ slides[currentImage].title }}</h1>
+                            <p>
+                                {{ slides[currentImage].text }}
+                            </p>
+                            <div id="button-container">
+                                <button id="button-1"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i> Visit my YouTube channel</button>
+                                <button id="button-2">Buy Avada today <i class="fa-solid fa-arrow-right-long"></i></button>
+                            </div>
                         </div>
+                        <div class="next" @click="nextImage"><i class="fa-solid fa-play" style="color: #075ae9;"></i></div>
                     </div>
-                    <div class="next" @click="nextImage"><i class="fa-solid fa-play" style="color: #075ae9;"></i></div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 </template>
 
 <style lang="scss" scoped>
 .item {
-    float: left;
-    width: 100%;
     height: 650px;
-    position: relative;
 
     
     #button-container{
