@@ -7,6 +7,7 @@
     import SectionFive from './Components/Main/SectionFive.vue'
     import SectionSix from './Components/Main/SectionSix.vue'
     import SectionSeven from './Components/Main/SectionSeven.vue'
+    import SectionEight from './Components/Main/SectionEight.vue'
 
     export default {
         components:{
@@ -17,7 +18,8 @@
             SectionFour,
             SectionFive,
             SectionSix,
-            SectionSeven
+            SectionSeven,
+            SectionEight
         },
         data(){
             return{}
@@ -37,6 +39,7 @@
         <SectionFive/>
         <SectionSix/>
         <SectionSeven/>
+        <SectionEight/>
     </main>
 </template>
 
