@@ -9,6 +9,7 @@
     import SectionSeven from './Components/Main/SectionSeven.vue'
     import SectionEight from './Components/Main/SectionEight.vue'
     import SectionNine from './Components/Main/SectionNine.vue'
+    import PageFooter from './Components/Footer/PageFooter.vue'
 
     export default {
         components:{
@@ -21,7 +22,8 @@
             SectionSix,
             SectionSeven,
             SectionEight,
-            SectionNine
+            SectionNine,
+            PageFooter
         },
         data(){
             return{}
@@ -44,6 +46,9 @@
         <SectionEight/>
         <SectionNine/>
     </main>
+    <footer>
+        <PageFooter/>
+    </footer>
 </template>
 
 <style lang="scss">

@@ -21,10 +21,13 @@
 @use '../../Styles/partials/mixins' as*;
 
     main{
-        background-image: url(../../../public/Imgaes/banner2-2x.jpg);
-        height: 75vh;
+        background-blend-mode: multiply;
+        background-image: linear-gradient(0deg, black 1%,white 100%), url(../../../public/Imgaes/banner2-2x.jpg);
+        //background-image: url(../../../public/Imgaes/banner2-2x.jpg);
+        height: 80vh;
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
 
         div{
             display: flex;

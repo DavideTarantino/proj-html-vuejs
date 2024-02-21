@@ -25,7 +25,9 @@
 @use '../../Styles/partials/mixins' as*;
 
     main{
-        background-image: url(../../../public/Imgaes/banner1-2x.jpg);
+        background-blend-mode: multiply;
+        background-image: linear-gradient(90deg, black 35%,white 100%), url(../../../public/Imgaes/banner1-2x.jpg);
+        //background-image: url(../../../public/Imgaes/banner1-2x.jpg);
         height: 80vh;
         background-size: cover;
         background-position: right;
